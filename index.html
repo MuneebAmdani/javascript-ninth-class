@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom And Bom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1 id="first">Muneeb</h1>
+    <h1 id="second">Amdani</h1> -->
+<!-- 
+    <div id="shape" class="name"></div>
+    <button type="button" onclick="changeColor()">color</button> -->
+
+<!-- 
+    <div id="shape" class="square"></div>
+    <button type="button" onclick="changeColor()">color</button> -->
+
+
+<!-- 
+    <html>
+  <body>
+    <script>
+      function rainbowify(){
+        let divs = document.getElementsByTagName("div");
+        console.log(divs)
+        for(let i = 0; i < divs.length; i++) {
+          divs[i].style.backgroundColor = divs[i].id;
+        }
+      }
+    </script>
+    <style>
+      div {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+      }
+    </style>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button>
+  </body>
+</html> -->
+
+<script>
+    window.onload=function(){
+        document.getElementById("square").addEventListener("click",changeColor);
+    }
+    function changeColor(){
+        let red=Math.floor(Math.random*(256));
+        let green=Math.floor(Math.random*(256));
+        let blue=Math.floor(Math.random*(256));
+        this.style.backgroundColor='rgb($(red),$(green), $(blue))';
+    }
+</script>
+<div id="square" style="width: 100px;height: 100px; background-color: grey;">Click for magic</div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
